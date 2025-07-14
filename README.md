@@ -87,7 +87,7 @@ Optimal $\sigma$ is calculated through **BINARY SEARCH**:
 - **Initialize search range** for $\sigma_i$ or $\beta_i$​:  
     e.g. $\beta_{max}$ = $10$, $\beta_{min}$= $0.01$
 - **Repeat**:
-    - Set $σ_i$=$\frac{σ_{min}+σ_{max}}{2}$ or $\beta_i$=$\frac{\beta_{min}+\beta_{max}}{2}$
+    - Set $σ_i$ = $\frac{σ_{min}+σ_{max}}{2}$ or $\beta_i$ = $\frac{\beta_{min}+\beta_{max}}{2}$
     - Compute the probabilities $p_{j|i}$​ using current $\sigma_i$​
     - Compute entropy $H(P_i)$
     - If $H(P_i)>log⁡_2(Perp)$:
@@ -108,7 +108,7 @@ $$
 $$\beta_i=\frac{\beta_{min}+\beta_{max}}{2}$$
 
 ---
-### 5. **Making The Assymetruc Matrix Symmetric**
+### 5. **Making The Assymetric Matrix Symmetric**
 
 ```python
 symmetrize_matrix(m):...
