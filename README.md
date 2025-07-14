@@ -1,7 +1,7 @@
 
 # t-SNE from Scratch
 
-This projects implements a **t-SNE (t-distributed Stochastic Neighbor Embedding)** algorithm in using `NumPy` completely from scratch and compares it with sklearn's TSNE.
+This projects implements **t-SNE (t-distributed Stochastic Neighbor Embedding)**, an unsupervised learning algorithm using `NumPy` completely from scratch and compares it with sklearn's TSNE.
 t-sne reduces high-dimensional data into low dimensions  for visualization while preserving local structure.
 
 ## Objectives
