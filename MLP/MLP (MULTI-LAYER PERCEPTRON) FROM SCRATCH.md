@@ -111,17 +111,17 @@ Key steps (vectorized):
 
 1. **Output layer gradient**  
    For binary cross-entropy loss `L` and sigmoid activation `a = sigmoid(z)`:
-   - `dA3 = - (y / a) + (1 - y) / (1 - a)`  (general form)
-   - This simplifies to `dZ3 = A3 - y` for BCE paired with sigmoid (numerically stable and commonly used)
-   - `dW3 = A2.T.dot(dZ3) / batch_size`
-   - `db3 = np.sum(dZ3, axis=0, keepdims=True) / batch_size`
+   - $dA3 = - (y / a) + (1 - y) / (1 - a)$  (general form)
+   - This simplifies to $dZ3 = A3 - y$ for BCE paired with sigmoid (numerically stable and commonly used)
+   - $dW3 = A2.T.dot(dZ3) / batch-size$
+   - $db3 = np.sum(dZ3, axis=0, keepdims=True) / batch-size$
 
 2. **Hidden layers**  
    Propagate the gradient backward through each hidden layer `l`:
-   - `dA_l = dZ_{l+1}.dot(W_{l+1}.T)`
-   - `dZ_l = dA_l * activation_derivative(Z_l)`  (for ReLU, derivative is 0 for Z<=0, 1 for Z>0)
-   - `dW_l = A_{l-1}.T.dot(dZ_l) / batch_size`
-   - `db_l = np.sum(dZ_l, axis=0, keepdims=True) / batch_size`
+   - $dA_l = dZ_{l+1}.dot(W_{l+1}.T)$
+   - $dZ_l = dA_l * activation-derivative(Z_l)$  (for ReLU, derivative is 0 for Z<=0, 1 for Z>0)
+   - $dW_l = A_{l-1}.T.dot(dZ_l) / batch-size$
+   - $db_l = np.sum(dZ_l, axis=0, keepdims=True) / batch_size$
 
 3. **Vectorized implementation**  
    All operations are performed with NumPy matrix ops to avoid Python loops and keep the code clean and fast. A typical backprop loop over layers (from last to first) looks like:
