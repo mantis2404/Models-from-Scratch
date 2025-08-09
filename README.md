@@ -38,7 +38,7 @@ Each implementation is contained in its own folder with a dedicated Jupyter Note
 
 **Results:** Comparable accuracy and loss trends with TensorFlow, validating the correctness of the implementation.
 
-For detailed explanation, see [`MLP/README.md`](MLP/MLP%20(MULTI-LAYER%20PERCEPTRON)%20FROM%20SCRATCH.md.md).
+For detailed explanation, see [`MLP/README.md`](MLP/MLP%20(MULTI-LAYER%20PERCEPTRON)%20FROM%20SCRATCH.md).
 
 ---
 
